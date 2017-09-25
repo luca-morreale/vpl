@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 
 project(VPL)
 
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 14)
 
 # set this as false if you are going to use another range simulator
 set(RANGE_SIM true)
