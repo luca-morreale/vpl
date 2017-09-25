@@ -14,9 +14,9 @@ link_directories(${VPL_SOURCE_DIR}/lib)
 set(LIBS_VIEW_PLANNING ViewPlanning PartialModel)
 
 # --------------- Octomap --------------------
-include_directories(${RELATED_DIRS_DIRECTORY}/octomap-devel/octomap/include)
-link_directories(${RELATED_DIRS_DIRECTORY}/octomap-devel/lib)
-set(LIBS_OCTOMAP octomap octomath octovis)
+find_package(octomap REQUIRED)
+include_directories(${OCTOMAP_INCLUDE_DIRS})
+set(LIBS_OCTOMAP ${OCTOMAP_LIBRARIES})
 
 # # ---------------- INIPARSER  -----------------
 # include_directories(${RELATED_DIRS_DIRECTORY}/iniparser/src)
